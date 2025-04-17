@@ -1,0 +1,13 @@
+.menu-header {
+    padding-top: 24px;
+    text-align: center;
+}
+
+.menu-header {
+    > h2{
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+   
+}

@@ -1,0 +1,9 @@
+<div class="menu-header">
+    <h2>Universal Blood Bank</h2>
+</div>
+<mat-nav-list [style.height]="'100%'">
+    <a mat-list-item *ngFor="let item of menuItems()">
+        <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+        <span matListItemTitle>{{item.label}}</span>
+    </a>
+</mat-nav-list>

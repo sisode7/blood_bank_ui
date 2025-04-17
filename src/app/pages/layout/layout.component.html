@@ -1,0 +1,13 @@
+<mat-toolbar class="mat-elevation-z3">
+    <button mat-icon-button (click)="openSideNav()">
+        <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" [style.width]="'350px;'" [style.marginTop.px]="'56'" fixedInViewport="true">
+        <app-sidemenu/>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
