@@ -1,13 +1,19 @@
-<mat-toolbar class="mat-elevation-z3">
-    <button mat-icon-button (click)="openSideNav()">
-        <mat-icon>menu</mat-icon>
-    </button>
-</mat-toolbar>
-<mat-sidenav-container>
-    <mat-sidenav #sidenav mode="side" [style.width]="'350px;'" [style.marginTop.px]="'56'" fixedInViewport="true">
+<!-- app.component.html -->
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened class="sidenav">
+      <h2 class="logo">Dashboard</h2>
+      <mat-nav-list>
         <app-sidemenu/>
+      </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content class="content">
-        <router-outlet></router-outlet>
+  
+    <mat-sidenav-content class="main-content">
+      <mat-toolbar color="primary">
+        <span>Angular Material Dashboard</span>
+      </mat-toolbar>
+  
+      <app-dashboard/>
     </mat-sidenav-content>
-</mat-sidenav-container>
+  </mat-sidenav-container>
+  
+  

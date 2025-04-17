@@ -65,7 +65,7 @@
               "browserTarget": "blood_bank_ui:build:production"
             },
             "development": {
-              "browserTarget": "blood_bank_ui:build:development",
+              "browserTarget": "blood_bank_ui:build:development"
             }
           },
           "options": {
