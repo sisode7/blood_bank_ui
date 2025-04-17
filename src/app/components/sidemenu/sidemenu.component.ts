@@ -20,7 +20,7 @@ export class SidemenuComponent {
     },
     {
       icon: 'accessibility',
-      label: 'Donars',
+      label: 'Donors',
       route: 'donars'
     }
   ]);

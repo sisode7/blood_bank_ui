@@ -4,10 +4,11 @@
       <div class="col div-content">
           <mat-card-content>
             <div class="header">
-              <h5 class="text-center">Sign In</h5>
+              <h5 class="text-center">eRaktAdhikosh Login</h5>
             </div>
             <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
               <div class="emailInput">
+                <p class="field-label">Enter your username:</p>
                 <mat-form-field class="full-width" appearance="outline">
                   <mat-label>Email</mat-label>
                   <input
@@ -21,6 +22,7 @@
                 </mat-form-field>
               </div>
               <div>
+                <p class="field-label">Enter your password:</p>
                 <mat-form-field class="full-width" appearance="outline">
                   <mat-label>Password</mat-label>
                   <input formControlName="password" matInput [type]=" hide ? 'password' : 'text'" required />
