@@ -16,12 +16,12 @@ export class SidemenuComponent {
     {
       icon: 'account_balance',
       label: 'Storage',
-      route: 'dashboard'
+      route: 'storage'
     },
     {
       icon: 'accessibility',
       label: 'Donors',
-      route: 'donars'
+      route: 'donor'
     }
   ]);
 }

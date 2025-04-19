@@ -12,3 +12,14 @@
     }
    
 }
+
+mat-list-item {
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: #FF5270 !important; 
+      > mat-icon,span {
+        color: white !important;
+      }
+    }
+}
+

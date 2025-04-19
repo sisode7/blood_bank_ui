@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
 
        this.authService.login(this.logiObj).subscribe((res:any)=>{
         if(res) {
-          this.router.navigateByUrl('dashboard')
+          this.router.navigateByUrl('/dashboard/storage')
         } else {
           alert('Invalid creds or request failed')
         }
