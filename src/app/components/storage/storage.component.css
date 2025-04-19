@@ -1,0 +1,11 @@
+.group-pane {
+    border-radius: 25px;
+    margin: 2rem;
+    width: 50%; 
+    height: 50%; 
+    background-color: #DA2C43;
+    color: white;
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+}

@@ -1,4 +1,8 @@
-<mat-grid-list class="grid-list" cols="2" rowHeight="2:1">
-    <mat-grid-tile *ngFor="let group of storages"  style="background: #DA2C43;">
-        {{group['bloodGroup']}} - {{group['units']}}</mat-grid-tile>
+<mat-grid-list class="grid-list" cols="2" gutterSize="5px" rowHeight="200px">
+  <mat-grid-tile *ngFor="let group of storages">
+    <div class="group-pane">
+      <span>Blood Group:  {{group['bloodGroup']}}</span> 
+      <span>Available Units:  {{group['units']}}</span> 
+    </div>
+  </mat-grid-tile>
 </mat-grid-list>
