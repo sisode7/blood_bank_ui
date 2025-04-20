@@ -7,6 +7,9 @@ import { StorageComponent } from './components/storage/storage.component';
 import { DonorComponent } from './components/donor/donor.component';
 import { AuthLayoutComponent } from './outlets/auth-layout/auth-layout.component';
 import { MainLayoutComponent } from './outlets/main-layout/main-layout.component';
+import { DonationsComponent } from './components/donations/donations.component';
+import { BloodRequestsComponent } from './components/blood-requests/blood-requests.component';
+import { ConsumersComponent } from './components/consumers/consumers.component';
 /**
  * { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: 'dashboard', component: DashboardComponent },
@@ -24,8 +27,18 @@ const routes: Routes = [
         canActivate: [AuthGuardService]
       },
       {
-        path: 'donor',
-        component: DonorComponent,
+        path: 'donations',
+        component: DonationsComponent,
+        canActivate: [AuthGuardService]
+      },
+      {
+        path: 'blood-requests',
+        component: BloodRequestsComponent,
+        canActivate: [AuthGuardService]
+      },
+      {
+        path: 'consumers',
+        component: ConsumersComponent,
         canActivate: [AuthGuardService]
       }
     ]

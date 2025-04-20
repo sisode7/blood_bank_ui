@@ -5,7 +5,8 @@
     height: 50%; 
     background-color: #DA2C43;
     color: white;
-    display: flex;
+    display: table;
     vertical-align: middle;
-    justify-content: center;
+    padding: 30px;
+    text-align: center;
 }

@@ -49,3 +49,15 @@
     justify-content: center;
     margin-bottom: 5px;
   }
+
+  .flexExpand {
+    flex: 1 1 auto;
+  }
+
+  .logout-lnk {
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+
+    }
+  }

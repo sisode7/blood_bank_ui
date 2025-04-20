@@ -24,6 +24,9 @@ import { StorageComponent } from './components/storage/storage.component';
 import { DonorComponent } from './components/donor/donor.component';
 import { AuthLayoutComponent } from './outlets/auth-layout/auth-layout.component';
 import { MainLayoutComponent } from './outlets/main-layout/main-layout.component';
+import { DonationsComponent } from './components/donations/donations.component';
+import { BloodRequestsComponent } from './components/blood-requests/blood-requests.component';
+import { ConsumersComponent } from './components/consumers/consumers.component';
 
 
 @NgModule({
@@ -37,6 +40,9 @@ import { MainLayoutComponent } from './outlets/main-layout/main-layout.component
     DonorComponent,
     AuthLayoutComponent,
     MainLayoutComponent,
+    DonationsComponent,
+    BloodRequestsComponent,
+    ConsumersComponent,
   ],
   imports: [
     BrowserModule,

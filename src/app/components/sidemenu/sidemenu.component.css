@@ -14,12 +14,29 @@
 }
 
 mat-list-item {
-    transition: background-color 0.3s ease;
-    &:hover {
-      background-color: #FF5270 !important; 
-      > mat-icon,span {
-        color: white !important;
-      }
-    }
+  width: 207px;
+  margin-left: 2px;
+  margin-bottom: 5px;
+  padding: 5px !important;
+  height: 45px !important;
+  float: left;
+  border-radius: 30px !important;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+  background: white;
+  span,mat-icon{
+    color: #DA2C43 !important;
+  }
+  span{font-weight: bold;}
+  &:hover {
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+    width: 215px;
+  }
+}
+
+mat-icon {
+  margin-right: 5px !important;
 }
 

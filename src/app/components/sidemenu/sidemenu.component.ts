@@ -14,14 +14,24 @@ export type MenuItem = {
 export class SidemenuComponent {
   menuItems = signal<MenuItem[]>([
     {
-      icon: 'account_balance',
+      icon: 'bloodtype',
       label: 'Storage',
       route: 'storage'
     },
     {
-      icon: 'accessibility',
-      label: 'Donors',
-      route: 'donor'
+      icon: 'volunteer_activism',
+      label: 'Donations',
+      route: 'donations'
+    },
+    {
+      icon: 'hail',
+      label: 'Blood Requests',
+      route: 'blood-requests'
+    },
+    {
+      icon: 'groups',
+      label: 'Bank Consumers',
+      route: 'consumers'
     }
   ]);
 }

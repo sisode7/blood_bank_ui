@@ -12,7 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent implements OnInit {
     loginForm!: FormGroup;
     submitted: boolean = false;
-    hide: boolean = false;
+    hide: boolean = true;
     logiObj: any;
     constructor(private formBuilder: FormBuilder, private router: Router, private http: HttpClient,private authService:AuthService) {}
     ngOnInit(){
