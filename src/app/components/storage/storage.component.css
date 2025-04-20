@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .group-pane {
     border-radius: 25px;
     margin: 2rem;
@@ -10,3 +11,61 @@
     padding: 30px;
     text-align: center;
 }
+=======
+.bank-container {
+  padding: 30px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  background: #fdfdfd;
+}
+
+.bank-title {
+  color: #b30000;
+  font-family: 'Georgia', serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.bank-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* two columns */
+  gap: 30px; /* spacing between cards */
+  justify-content: center;
+  align-items: center;
+}
+
+.blood-card {
+  background-color: #db2c40;
+  border-radius: 16px;
+  width: 500px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+.blood-card:hover {
+  transform: scale(1.05);
+}
+
+.blood-type {
+  background-color: white;
+  color: #db2c40;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+
+.blood-units {
+  font-size: 18px;
+  font-weight: 500;
+}
+>>>>>>> Stashed changes

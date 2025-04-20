@@ -1,9 +1,18 @@
+<<<<<<< Updated upstream
 <mat-grid-list class="grid-list" cols="2" gutterSize="5px" rowHeight="200px">
   <mat-grid-tile *ngFor="let group of storages">
     <div class="group-pane">
       <span>Blood Group:  {{group['bloodGroup']}}</span>
       <br/>
       <span>Available Units:  {{group['units']}}</span>
+=======
+<div class="bank-container">
+  <h2 class="bank-title">STORAGE</h2>
+  <div class="bank-grid">
+    <div class="blood-card" *ngFor="let group of storages">
+      <div class="blood-type">{{ group['bloodGroup'] }}</div>
+      <div class="blood-units">{{ group['units'] }} units</div>
+>>>>>>> Stashed changes
     </div>
-  </mat-grid-tile>
-</mat-grid-list>
+  </div>
+</div>
