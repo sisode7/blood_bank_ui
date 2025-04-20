@@ -35,8 +35,10 @@ export class AuthService {
   }
 
   logout(): void {
+    localStorage.removeItem('userDetails');
     localStorage.removeItem('jwtToken');
     this.isLoggedIn = false;
+    
   }
 
   isAuthenticated(): boolean {

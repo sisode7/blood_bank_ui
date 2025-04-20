@@ -27,7 +27,10 @@ mat-list-item {
   span,mat-icon{
     color: #DA2C43 !important;
   }
-  span{font-weight: bold;}
+  span{
+    font-weight: bold;
+  }l
+
   &:hover {
     position: relative;
     top: 0;
