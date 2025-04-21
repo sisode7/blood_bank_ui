@@ -18,7 +18,16 @@
 
     <mat-form-field class="full-width">
       <mat-label>Blood Group</mat-label>
-      <input matInput [(ngModel)]="data.bloodGroup" name="bloodGroup">
+      <mat-select [(ngModel)]="data.bloodGroup" name="bloodGroup" required>
+        <mat-option value="A+">A+</mat-option>
+        <mat-option value="A-">A-</mat-option>
+        <mat-option value="B+">B+</mat-option>
+        <mat-option value="B-">B-</mat-option>
+        <mat-option value="AB+">AB+</mat-option>
+        <mat-option value="AB-">AB-</mat-option>
+        <mat-option value="O+">O+</mat-option>
+        <mat-option value="O-">O-</mat-option>
+      </mat-select>
     </mat-form-field>
   </form>
 </mat-dialog-content>

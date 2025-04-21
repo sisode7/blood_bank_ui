@@ -18,4 +18,9 @@ export class ConsumerService {
                 'Content-Type' : 'application/json'
             }});
     }
+
+    deleteConsumer(consumer:any) {
+      let url = 'http://localhost:4200/api/consumer/delete/'+consumer.id;
+      return this.http.delete(url);
+    }
 }
