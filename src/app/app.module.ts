@@ -35,6 +35,7 @@ import { ConsumersComponent } from './components/consumers/consumers.component';
 import { ConsumerDialogComponent } from './components/consumers/consumer-dialog/consumer-dialog.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { RequestDialogComponent } from './components/blood-requests/request-dialog/request-dialog.component';
+import { DonationsDialogComponent } from './components/donations/donations-dialog/donations-dialog.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { RequestDialogComponent } from './components/blood-requests/request-dial
     BloodRequestsComponent,
     ConsumersComponent,
     ConsumerDialogComponent,
-    RequestDialogComponent
+    RequestDialogComponent,
+    DonationsDialogComponent
   ],
   
   imports: [

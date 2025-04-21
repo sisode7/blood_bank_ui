@@ -1,1 +1,53 @@
-<p>donations works!</p>
+<div class="table-wrapper">
+    <h2 class="donation-title">DONATIONS</h2>
+  <div style="margin-bottom: 16px;">
+    <button mat-raised-button class="mat-button" (click)="addDonation()">
+      Add Donation
+    </button>
+  </div>
+  
+  <!-- Table -->
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="bloodGroup">
+      <mat-header-cell *matHeaderCellDef> Blood Group </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.bloodGroup}} </mat-cell>
+    </ng-container>
+  
+    <!-- Address Column -->
+    <ng-container matColumnDef="consumerName">
+      <mat-header-cell *matHeaderCellDef> Consumer Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.consumerName}} </mat-cell>
+    </ng-container>
+  
+     <!-- Request Type -->
+     <ng-container matColumnDef="type">
+        <mat-header-cell *matHeaderCellDef> Type </mat-header-cell>
+        <mat-cell *matCellDef="let element"> 
+          <span [ngClass]="element.type === 'Pending' ? 'pending' : 'completed'">
+            {{element.type}}
+          </span>
+        </mat-cell>
+      </ng-container>
+  
+      <!-- Units Column -->
+      <ng-container matColumnDef="units">
+        <mat-header-cell *matHeaderCellDef> Units </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.units}} </mat-cell>
+      </ng-container>
+  
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <button mat-button color="warn" (click)="deleteDonation()">Delete</button>
+        </mat-cell>
+      </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  
+  </mat-table>
+  
+  </div>
