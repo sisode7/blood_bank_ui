@@ -21,6 +21,12 @@
     <mat-cell *matCellDef="let element"> {{element.address}} </mat-cell>
   </ng-container>
 
+   <!-- Aadhar Id -->
+   <ng-container matColumnDef="aadharId">
+    <mat-header-cell *matHeaderCellDef> Aadhar Id </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.aadharId}} </mat-cell>
+  </ng-container>
+
   <!-- Blood Group Column -->
   <ng-container matColumnDef="bloodGroup">
     <mat-header-cell *matHeaderCellDef> Blood Group </mat-header-cell>
