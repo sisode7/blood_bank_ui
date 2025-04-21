@@ -1,0 +1,59 @@
+.about-container {
+  padding: 15px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  background: #fdfdfd;
+}
+
+.about-card {
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 20px;
+  text-align: center;
+  color: #420202;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.card-title-wrapper {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.card-title-wrapper h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #b30000;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+
+h3 {
+  color: #b30000;
+  font-family: 'Georgia', serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.team-card {
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-card img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}

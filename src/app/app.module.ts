@@ -1,5 +1,6 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatTableModule } from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
@@ -27,6 +32,9 @@ import { MainLayoutComponent } from './outlets/main-layout/main-layout.component
 import { DonationsComponent } from './components/donations/donations.component';
 import { BloodRequestsComponent } from './components/blood-requests/blood-requests.component';
 import { ConsumersComponent } from './components/consumers/consumers.component';
+import { ConsumerDialogComponent } from './components/consumers/consumer-dialog/consumer-dialog.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { RequestDialogComponent } from './components/blood-requests/request-dialog/request-dialog.component';
 
 
 @NgModule({
@@ -34,6 +42,7 @@ import { ConsumersComponent } from './components/consumers/consumers.component';
     AppComponent,
     LoginComponent,
     LayoutComponent,
+    AboutUsComponent,
     LogoutComponent,
     SidemenuComponent,
     StorageComponent,
@@ -43,9 +52,13 @@ import { ConsumersComponent } from './components/consumers/consumers.component';
     DonationsComponent,
     BloodRequestsComponent,
     ConsumersComponent,
+    ConsumerDialogComponent,
+    RequestDialogComponent
   ],
+  
   imports: [
     BrowserModule,
+    MatTableModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
@@ -57,9 +70,13 @@ import { ConsumersComponent } from './components/consumers/consumers.component';
     MatListModule,
     MatGridListModule, 
     NgbModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    MatDialogModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatSelectModule    
   ],
+  
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
   ],

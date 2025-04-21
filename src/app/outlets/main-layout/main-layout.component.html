@@ -15,7 +15,8 @@
       <mat-toolbar color="warn">
         <h2>Online Blood Bank Portal</h2>
         <span class="flexExpand"></span>
-        <span class="logout-lnk" (click)="logOut()">Logout</span>
+        <a mat-button routerLink="/dashboard/about-us">About Us</a>
+        <button mat-button class="'logout-lnk" (click)="logOut()">Logout</button>
       </mat-toolbar>
       <router-outlet></router-outlet>
     </mat-sidenav-content>

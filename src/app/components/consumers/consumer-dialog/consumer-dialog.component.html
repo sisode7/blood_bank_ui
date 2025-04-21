@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>Add New Consumer</h2>
+<mat-dialog-content>
+  <form>
+    <mat-form-field class="full-width">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="data.name" name="name">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Address</mat-label>
+      <input matInput [(ngModel)]="data.address" name="address">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Blood Group</mat-label>
+      <input matInput [(ngModel)]="data.bloodGroup" name="bloodGroup">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-raised-button class="mat-add-button" (click)="onAdd()">Add</button>
+</mat-dialog-actions>

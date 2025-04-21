@@ -1,0 +1,49 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+.table-wrapper {
+  margin: 20px auto;
+  width: fit-content;
+  overflow-x: auto;
+  text-align: center;
+}
+
+mat-table {
+  width: 80%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: auto;
+}
+
+mat-header-cell {
+  background-color: #ffebee; /* Light red for title bar */
+  font-weight: bold;
+  color: #c62828;
+}
+
+mat-cell,
+mat-header-cell {
+  padding: 16px;
+  text-align: left;
+}
+
+.actions-column {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+button {
+  min-width: 36px;
+}
+
+.mat-req-button {
+  background-color: #db2c40;
+  color: white;
+}
+
+h2.consumer-title {
+  text-align: center;
+  color: #b71c1c;
+  margin-bottom: 20px;
+}

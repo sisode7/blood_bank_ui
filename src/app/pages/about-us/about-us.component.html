@@ -1,0 +1,24 @@
+<div class="about-container">
+  <mat-card class="about-card">
+  <div class="card-title-wrapper">
+    <h2 mat-card-title>ABOUT US</h2>
+  </div>
+
+  <mat-card-content>
+    <p>
+      eRaktAdhikosh is a centralized blood bank management system designed to streamline and enhance the efficiency of blood storage and transfusion services. Our platform allows seamless tracking of blood availability, donor records, and recipient data across multiple locations. By integrating essential data into a single, accessible system, eRaktAdhikosh empowers healthcare professionals and organizations to make informed, life-saving decisions swiftly and accurately. It's a vital tool for modern blood banks, ensuring transparency, accountability, and timely support in critical situations.</p>
+
+    <h3>Our Team</h3>
+    <div class="team-grid">
+      <mat-card class="team-card" *ngFor="let member of team">
+        <img mat-card-image [src]="member.photo" alt="Team member">
+        <mat-card-content>
+          <h4>{{ member.name }}</h4>
+          <p>{{ member.role }}</p>
+          <p>{{member.description}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-card-content>
+</mat-card>
+</div>

@@ -10,6 +10,7 @@ import { MainLayoutComponent } from './outlets/main-layout/main-layout.component
 import { DonationsComponent } from './components/donations/donations.component';
 import { BloodRequestsComponent } from './components/blood-requests/blood-requests.component';
 import { ConsumersComponent } from './components/consumers/consumers.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 /**
  * { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: 'dashboard', component: DashboardComponent },
@@ -40,9 +41,15 @@ const routes: Routes = [
         path: 'consumers',
         component: ConsumersComponent,
         canActivate: [AuthGuardService]
+      },
+      {
+        path: 'about-us',
+        component: AboutUsComponent,
+        canActivate: [AuthGuardService]
       }
     ]
   },
+  
   {
     path: '',
     component: AuthLayoutComponent,

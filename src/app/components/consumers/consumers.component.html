@@ -1,1 +1,44 @@
-<p>consumers works!</p>
+<div class="table-wrapper">
+  <h2 class="consumer-title">BANK CONSUMERS</h2>
+<div style="margin-bottom: 16px;">
+  <button mat-raised-button class="mat-button" (click)="addConsumer()">
+    Add Consumer
+  </button>
+</div>
+
+<!-- Table -->
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+  </ng-container>
+
+  <!-- Address Column -->
+  <ng-container matColumnDef="address">
+    <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.address}} </mat-cell>
+  </ng-container>
+
+  <!-- Blood Group Column -->
+  <ng-container matColumnDef="bloodGroup">
+    <mat-header-cell *matHeaderCellDef> Blood Group </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.bloodGroup}} </mat-cell>
+  </ng-container>
+
+  <!-- Actions Column -->
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <button mat-button color="accent" (click)="editConsumer(element)">Edit</button>
+      <button mat-button color="warn" (click)="deleteConsumer(element)">Delete</button>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table>
+
+</div>
