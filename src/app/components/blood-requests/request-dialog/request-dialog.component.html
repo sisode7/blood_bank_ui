@@ -4,20 +4,28 @@
   <form>
     <mat-form-field class="full-width">
       <mat-label>Blood Group</mat-label>
-      <input matInput [(ngModel)]="data.bloodGroup" name="bloodGroup" required>
+      <mat-select [(ngModel)]="data.bloodGroup" name="bloodGroup" required>
+        <mat-option value="A+">A+</mat-option>
+        <mat-option value="A-">A-</mat-option>
+        <mat-option value="B+">B+</mat-option>
+        <mat-option value="B-">B-</mat-option>
+        <mat-option value="AB+">AB+</mat-option>
+        <mat-option value="AB-">AB-</mat-option>
+        <mat-option value="O+">O+</mat-option>
+        <mat-option value="O-">O-</mat-option>
+      </mat-select>
     </mat-form-field>
 
     <mat-form-field class="full-width">
-      <mat-label>Consumer Name</mat-label>
-      <input matInput [(ngModel)]="data.consumerName" name="consumerName" required>
+      <mat-label>Consumers</mat-label>
+      <mat-select [(ngModel)]="selectedConsumer" name="consumerId" required>
+        <mat-option *ngFor="let cons of data.consumerList" value="{{cons.id}}:{{cons.name}}">{{cons.name}}</mat-option>
+      </mat-select>
     </mat-form-field>
 
     <mat-form-field class="full-width">
       <mat-label>Type</mat-label>
-      <mat-select [(ngModel)]="data.type" name="type" required>
-        <mat-option value="Pending">Pending</mat-option>
-        <mat-option value="Completed">Completed</mat-option>
-      </mat-select>
+      <input matInput value="DEMAND" name="requestType" readonly>
     </mat-form-field>
 
     <mat-form-field class="full-width">
