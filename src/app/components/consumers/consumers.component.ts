@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ConsumerDialogComponent } from './consumer-dialog/consumer-dialog.component';
 import { ConsumerService } from 'src/app/services/consumer.service';
 import { Router } from '@angular/router';
+import { StorageService } from 'src/app/services/storage.service';
 
 
 @Component({
@@ -13,19 +14,16 @@ import { Router } from '@angular/router';
 export class ConsumersComponent implements OnInit{
 
   displayedColumns: string[] = ['name', 'address', 'bloodGroup','aadharId', 'actions'];
-  //dataSource:[] = []
+  dataSource:any[] = [];
+  bloodGroups:any[] = [];
 
   constructor(private dialog: MatDialog, private consumerService: ConsumerService,private router:Router) {}
 
   ngOnInit(){
     this.getAllConsumers();
+
   }
 
-  dataSource = [
-    { name: 'John Doe', address: '123 Main St', aadharId: '2342342', bloodGroup: 'A+' },
-    { name: 'Jane Smith', address: '456 Elm St',aadharId: '2342342', bloodGroup: 'B-' },
-    { name: 'Mike Johnson', address: '789 Oak St',aadharId: '2342342', bloodGroup: 'O+' },
-  ];
 
   getAllConsumers() {
     this.consumerService.getAllConsumers().subscribe((res:any)=>{
@@ -37,10 +35,14 @@ export class ConsumersComponent implements OnInit{
     });
   }
 
+
+
+
+
   addConsumer() {
     const dialogRef = this.dialog.open(ConsumerDialogComponent, {
       width: '300px',
-      data: { name: '', address: '', bloodGroup: '' }
+      data: { name: '', address: '', aadharId:'', bloodGroup: '' }
     });
   
     dialogRef.afterClosed().subscribe(result => {
@@ -72,7 +74,16 @@ export class ConsumersComponent implements OnInit{
 
   deleteConsumer(consumer: any) {
     console.log('Delete button clicked for:', consumer);
+
+    let text = "Are you sure to delete the consumer?";
+    if (confirm(text) == true) {
+      this.consumerService.deleteConsumer(consumer).subscribe(res=>{
+        if(res) {
+          alert("Consumer deleted successfully..");
+        }
+      })
+      this.dataSource = this.dataSource.filter(c => c !== consumer);
+    } 
     // Remove the consumer from dataSource
-    this.dataSource = this.dataSource.filter(c => c !== consumer);
   }
 }
