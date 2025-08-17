@@ -11,7 +11,7 @@
     <h3>Our Team</h3>
     <div class="team-grid">
       <mat-card class="team-card" *ngFor="let member of team">
-        <img mat-card-image [src]="member.photo" alt="Team member">
+        <img mat-card-image [src]="'assets/' + member.photo" alt="{{ member.name }}">
         <mat-card-content>
           <h4>{{ member.name }}</h4>
           <p>{{ member.role }}</p>
